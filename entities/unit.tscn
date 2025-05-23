@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://boajaw0ixh0gb"]
+
+[ext_resource type="Script" uid="uid://drcn13kvjp7jt" path="res://entities/unit.gd" id="1_b3y04"]
+[ext_resource type="Script" uid="uid://bik3h42ibb2u8" path="res://entities/unit_stats.gd" id="2_bork7"]
+
+[sub_resource type="Gradient" id="Gradient_bork7"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hwtar"]
+gradient = SubResource("Gradient_bork7")
+
+[node name="Unit" type="Node2D"]
+script = ExtResource("1_b3y04")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(45, 5)
+
+[node name="Stats" type="Node" parent="."]
+script = ExtResource("2_bork7")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -68.0
+offset_right = -28.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="TextureProgressBar" parent="UI"]
+z_index = 40
+layout_mode = 0
+offset_left = 80.0
+offset_top = 30.0
+offset_right = 146.0
+offset_bottom = 42.0
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture2D_hwtar")
+
+[node name="StatusEffects" type="Node2D" parent="UI"]
+
+[node name="StelectionHighlight" type="ColorRect" parent="UI"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

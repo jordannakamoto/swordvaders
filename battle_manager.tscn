@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0h6kirvurq8j"]
+
+[ext_resource type="Script" uid="uid://lq241t1mtblu" path="res://battle_engine/battle_manager.gd" id="1_r0ul7"]
+
+[node name="BattleManager" type="Node"]
+script = ExtResource("1_r0ul7")
+
+[node name="TurnManager" type="Node" parent="."]
+
+[node name="CardManager" type="Node" parent="."]
+
+[node name="EffectProccessor" type="Node" parent="."]
+
+[node name="EntityManager" type="Node" parent="."]
+
+[node name="Node5" type="Node" parent="."]
